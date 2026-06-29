@@ -1,0 +1,26 @@
+{
+  "name": "Test Playbook",
+  "plays": [
+    {
+      "name": "Test Play",
+      "hosts": "all",
+      "become_value": false,
+      "vars": { "env": "production" },
+      "tasks": [
+        {
+          "name": "Install nginx",
+          "when": null,
+          "loop_items": null,
+          "module": {
+            "type": "Apt",
+            "params": {
+              "name": ["nginx"],
+              "state": "present",
+              "update_cache": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
