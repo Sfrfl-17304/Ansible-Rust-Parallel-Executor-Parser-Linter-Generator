@@ -2,6 +2,7 @@ use clap::Parser;
 
 mod ast;
 mod cli;
+mod generator;
 use cli::{Cli, Commands};
 
 fn main() {
